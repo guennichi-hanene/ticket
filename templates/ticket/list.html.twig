@@ -1,0 +1,22 @@
+{% extends 'template.html.twig' %}
+
+{% block title %}
+    Liste des ticket
+{% endblock %}
+
+{% block body %}
+    <h1>Liste destickets</h1>
+    <div class="row">
+        {% for ticket in ticket %}
+            <div class="card col-3 m-2">
+                <div class="card-body">
+                    <h5 class="card-title">{{ ticket.titre }} {{ ticket.statut }}{{ ticket.description }}{{ ticket.date}}</h5>
+                    
+                    <a href="{{ path('ticket.details', {id: ticket.id }) }}" class="card-link">Card link</a>
+                   
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+   
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'template.html.twig' %}
+
+{% block body %}
+    {% if ticket %}
+    <div>
+        <p>
+           titre : {{ ticket.titre }}
+        </p>
+        <p>
+            personne : {{ ticket.personne }}
+        </p>
+        
+        <p>
+            statut: {{ ticket.statut }}
+        </p>
+        <p>
+            description: {{ ticket.description }}
+        </p>
+        <p>
+            date: {{ ticket.date }}
+        </p>
+    </div>
+    {% endif %}
+{% endblock %}
+
+{% block title %}
+    Détails Ticket
+{% endblock %}
